@@ -9,7 +9,12 @@ for n in range(0, 50):
     n1 = ipaddress.IPv4Network((net, mask), strict=False)
     network_list.append(n1)
 
-print(sorted(network_list))
+n2 = ipaddress.IPv4Network(int(net), int(mask))
+network_list.append(n2)
+
+network_list.sort(reverse=True)
+print(network_list)
+
 
 
 
