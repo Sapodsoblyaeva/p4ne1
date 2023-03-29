@@ -21,6 +21,13 @@ def configs():
     pprint.pprint(files)
     return(files)
 
+@app.route('/configs/hostname')
+def hostname():
+    files = os.listdir('/Users/sveta/Downloads/config_files/')
+    pprint.pprint(files)
+    return(files)
+
+
 if __name__=='__main__':
     app.run(debug=True)
 
